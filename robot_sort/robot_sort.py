@@ -116,7 +116,7 @@ class SortingRobot:
                 # Comparing to 1 sorts ascending.. comparing to -1 sorts descending
                 if self.compare_item() == 1:
                     self.swap_item()
-                print(self._list)
+                # print(self._list)
                 # After traversing till the end the robot has the smalled number in hand
             # Now the robot is coming back in the list to replace none with the smallest number in hand
             while self.compare_item() is not None:
