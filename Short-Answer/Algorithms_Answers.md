@@ -11,6 +11,7 @@ examination we find that, the value of j within for-loop is always 1 and j is al
 if the while loop was not present, the code snipped could have been implemented and this looping will be a O(log n). In summary,
 the outer loop is O(n) and inner loop is O(log n). Therefore, the runtime complexity is O(n log n).
 
-c)
+c) The catch in this function is this is a recursive function. The return is a constant time. This function is recursive till
+bunnies gets to 0 (where bunnies is n). Hence the run time complexity of this function is O(n)
 
 ## Exercise II
