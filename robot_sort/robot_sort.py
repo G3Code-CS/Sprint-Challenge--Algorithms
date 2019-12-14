@@ -96,11 +96,17 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
+
         # Peform functions while the robot can move right
         # Compare the item in its position and before if the position before is higher then swap
         # If the item is small keep moving to the left till it fits
         # start moving right again
         # When you cannot move any further right its done.
+        if self.can_move_right() == True:
+            print('Can move right')
+        else:
+            return
+
 
 
 if __name__ == "__main__":
