@@ -104,6 +104,14 @@ class SortingRobot:
         # When you cannot move any further right its done.
         if self.can_move_right() == True:
             print('Can move right')
+            # swapping the item so I can keep moving
+            self.swap_item()
+            print(self._item)
+            while self.can_move_right:
+                print('moving right')
+                self.move_right()
+                print(self._item)
+                # Compare the item on hand with the item in position
         else:
             return
 
