@@ -15,3 +15,44 @@ c) The catch in this function is this is a recursive function. The return is a c
 bunnies gets to 0 (where bunnies is n). Hence the run time complexity of this function is O(n)
 
 ## Exercise II
+
+### Algorithm for devising the least broken eggs:
+
+From the problem statement: "Suppose also that an egg gets broken if it is thrown off floor f or higher, and doesn't get broken if dropped off a floor less than floor f."
+
+This is a perfect problem to be solved using binary search. We have to find that floor from when on wards the egg will start breaking.
+
+Note: For binary search the main criteria is the list that we are searching has to be sorted. The building in this cases is like a sorted array list.
+
+Following will be the steps I will device to find the floor when the egg starts to break:
+
+1. Find the middle floor and drop the egg.
+   ---> If the egg breaks then we need to move to the lower list of floors else we will need to move to higher list of floors.
+   Assuming the egg breaks:
+
+2. From the lower list of floors, we will find the middle floor and drop the egg.
+   ---> If the egg breaks then we need to move to the lower list of floors else we will need to move to higher list of floors.
+   Assuming the egg breaks:
+
+As you can see we find a pattern for recursion here. We will recursively use this strategy to find the exact floor where the egg will break.
+
+3. Finally, we will come to a point where we might have just only two floors or one floor. At that point, if there is only one floor we will
+   return the floor or if there are two floors we can check in which floor the egg breaks and return that floor value.
+
+## A simple pseudo code to understand the logic
+
+eggbreak( floor_list)
+if number of floors length is 0
+return 0
+if number of floor length is 1
+return that floor
+if number of floor length is 2
+find which floor the egg breaks and return that floor
+floor_list/2
+if egg breaks
+return eggbreak(bottom floor list)
+else
+return eggbreak(top floor list)
+
+As we can see we do not iterate through the entire array / set of floors to find which floor. Rather we work
+on a subset of the floors narrowing the possibility. Hence the run time complexity will be O(log n)
