@@ -96,8 +96,11 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Fill this out
-        pass
+        # Peform functions while the robot can move right
+        # Compare the item in its position and before if the position before is higher then swap
+        # If the item is small keep moving to the left till it fits
+        # start moving right again
+        # When you cannot move any further right its done.
 
 
 if __name__ == "__main__":
